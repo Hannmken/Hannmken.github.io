@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonardo DaVinci</title>
+<link href="AboutPageAssets/styles/aboutPageStyle.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+<header>
+  <div class="profileLogo"> 
+    <p class="logoPlaceholder"><span></span></p>
+  </div>
+  <div class="profilePhoto"> 
+    <img src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTY2MzU4MjUzMDA4MDcwMzE4/portrait-of-leonardo-da-vinci-1452-1519-getty.jpg" alt="sample"> </div>
+  <section class="profileHeader">
+    <h1>KEN HAN</h1>
+    <h3>BEGINNER WEB DESIGNER</h3>
+    <hr>
+    <p>Hi! My name is Ken Han and i'm a new web designer. I am currently taking the course Full-Stack Engineer in Codecadamy. My goal is to finish this course and have enough front-end and back-end knowlegde to get me a internship. My dream job is to work in the computer science field and this is one big step into making it a reality. This is my first ever project that I did on my own and publish it to Github.  </p>
+  </section>
+  
+	</header>
+<section class="mainContent"> 
+  <section class="section1">
+    <h2 class="sectionTitle">Contact Me</h2>
+    <hr class="sectionTitleRule">
+    <hr class="sectionTitleRule2">
+    <div class="section1Content">
+      <p><span>Email :</span> mkenhan@outlook.com</p>
+      <p><span>Phone :</span> 412-639-9019</p>
+      <p><span>Address :</span> Pittsburgh, Pennsylvania</p>
+    </div>
+	</section>
+  <section class="section2">
+    <h2 class="sectionTitle">About</h2>
+    <hr class="sectionTitleRule">
+    <hr class="sectionTitleRule2">
+    <article class="section2Content">
+      <h2 class="sectionContentTitle">Who is Leonardo Da Vinci</h2>
+      <p class="sectionContent">Leonardo da Vinci was a Renaissance painter, sculptor, architect, inventor, military engineer and draftsman — the epitome of a true Renaissance man. Gifted with a curious mind and a brilliant intellect, da Vinci studied the laws of science and nature, which greatly informed his work. His drawings, paintings and other works have influenced countless artists and engineers over the centuries. </p>
+    </article>
+	  
+    <article class="section2Content">
+      <h2 class="sectionContentTitle">Early Life</h2>
+      <p class="sectionContent">Da Vinci was born in a farmhouse outside the village of Anchiano in Tuscany, Italy (about 18 miles west of Florence) on April 15, 1452.
+
+Born out of wedlock to respected Florentine notary Ser Piero and a young peasant woman named Caterina, da Vinci was raised by his father and his stepmother. 
+
+At the age of five, he moved to his father’s estate in nearby Vinci (the town from which his surname derives), where he lived with his uncle and grandparents. </p>
+    </article>
+	   <article class="section2Content">
+      <h2 class="sectionContentTitle">Education</h2>
+      <p class="sectionContent">Young da Vinci received little formal education beyond basic reading, writing and mathematics instruction, but his artistic talents were evident from an early age.
+
+Around the age of 14, da Vinci began a lengthy apprenticeship with the noted artist Andrea del Verrocchio in Florence. He learned a wide breadth of technical skills including metalworking, leather arts, carpentry, drawing, painting and sculpting. 
+
+His earliest known dated work — a pen-and-ink drawing of a landscape in the Arno valley — was sketched in 1473. </p>
+    </article>		
+  </section>
+	
+  <section class="section1">
+    <h2 class="sectionTitle">JavaScript</h2>
+    <hr class="sectionTitleRule">
+    <hr class="sectionTitleRule2">
+    <div class="section1Content">
+      <p>It has been <span id="time-container">0</span> seconds since Leonardo was born.</p>
+    </div>
+	</section>
+</section>
+<footer>
+  <hr>
+  <p class="footerNote">Made by Ken Han <span></span></p>
+</footer>
+</body>
+	<script>
+    const timeContainer = document.getElementById("time-container");
+    const BIRTH_DAY = "4-15-1452";
+    const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+    const intlNumberFormatter = new Intl.NumberFormat("en-US");
+
+    setInterval(() => {
+      const now = new Date();
+      const difference = Math.floor(
+        (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+      );
+
+      timeContainer.innerText = intlNumberFormatter.format(difference);
+    }, 1000);
+  </script>
+</html>
